@@ -15,26 +15,3 @@ CREATE TABLE post (
   body TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
-
-DROP TABLE IF EXISTS contacts;
-DROP TABLE IF EXISTS skills;
-
-CREATE TABLE contacts (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  username TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL,
-  firstname TEXT NOT NULL,
-  lastname TEXT NOT NULL,
-  fullname TEXT NOT NULL,
-  address TEXT NOT NULL,
-  email TEXT NOT NULL,
-  phone INTEGER NOT NULL
-);
-
-CREATE TABLE skills (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  username TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL,
-  fullname TEXT NOT NULL,
-  level INTEGER NOT NULL
-);
